@@ -27,7 +27,7 @@ jobs:
           
       # Publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
-        run: dotnet publish HelloTemplateBlazor.Wasm/HelloTemplateBlazor.Wasm.csproj -c:Release -o dist/Web --nologo
+        run: dotnet publish HelloTemplateBlazor.Wasm/HelloTemplateBlazor.Wasm.csproj -c:Release -o release --nologo
 
       # changes the base-tag in index.html from '/' to 'BlazorGHPage' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to BlazorGHPage
@@ -45,4 +45,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-page
-          folder: dist/Web/wwwroot
+          folder: release/wwwroot
