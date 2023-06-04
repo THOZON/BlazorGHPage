@@ -33,4 +33,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-page
-          target-folder: dist/Web/wwwroot
+          folder: dist/Web/wwwroot
